@@ -1,0 +1,56 @@
+services:
+
+  # ── PostgreSQL Database ─────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: svai-postgres
+    restart: always
+    environment:
+      POSTGRES_DB:       svai
+      POSTGRES_USER:     svai
+      POSTGRES_PASSWORD: svai_secret
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"          # expose for local DB tools (e.g. pgAdmin, DBeaver)
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U svai -d svai"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # ── Node.js Express Backend ─────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: svai-backend
+    restart: always
+    environment:
+      PORT:        3001
+      DB_HOST:     postgres
+      DB_PORT:     5432
+      DB_NAME:     svai
+      DB_USER:     svai
+      DB_PASSWORD: svai_secret
+      CORS_ORIGIN: "*"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    expose:
+      - "3001"
+
+  # ── React Frontend (Nginx) ──────────────────────────────
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: svai-web
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
