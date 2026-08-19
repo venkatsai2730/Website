@@ -18,7 +18,7 @@ export const EDGES = [
 ];
 
 export const NAV = [
-  { href: "#products", label: "Products" },
   { href: "#model", label: "How it works" },
+  { href: "#products", label: "Products" },
   { href: "#roadmap", label: "Roadmap" },
 ];

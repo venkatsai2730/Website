@@ -26,14 +26,15 @@ export default function Hero() {
         <div className="hero-copy reveal">
           <span className="eyebrow">AI product studio</span>
           <h1>
-            We build AI products
+            Ship production AI
             <br />
-            <span className="accent">worth subscribing to.</span>
+            <span className="accent">faster than you thought possible.</span>
           </h1>
           <p className="lede">
-            svAI Solutions turns ideas into AI products, ships them fast, learns from how people
-            actually use them, and runs the ones you love as subscriptions. Job-Skill AI is live
-            today — and it's only the first.
+            Building agent-powered products that work in production. Job-Skill AI is live with
+            sub-200ms latency across an 11-node LangGraph workflow with multi-provider LLM routing
+            and hybrid RAG. PythonOS-1B (custom MoE transformer, 2B params, 32K context) training
+            Q3. Measured against real usage, not benchmarks. Deployed solo, scaled with care.
           </p>
           <div className="hero-actions">
             <a

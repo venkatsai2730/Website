@@ -140,10 +140,22 @@ const EDGES = [
 
 const DOTS_PER_EDGE = 2;
 
+/* ── Mobile flow stages for simplified view ── */
+const MOBILE_STAGES = [
+  { id: "intake", label: "intake", role: "Gateway & Normalizer" },
+  { id: "router", label: "intent router", role: "Semantic Dispatcher" },
+  { id: "planner", label: "planner", role: "Execution Orchestrator" },
+  { id: "agents", label: "resume · jobs · interview", role: "Specialist Agents" },
+  { id: "synth", label: "synthesis", role: "Output Aggregator" },
+  { id: "memory", label: "memory", role: "Long-term Vector Memory" },
+  { id: "final", label: "output", role: "Stream & Delivery" },
+];
+
 export default function Graph() {
   const [stage, setStage] = useState(0);
   const [selectedNode, setSelectedNode] = useState(null);
   const [hoveredNode, setHoveredNode] = useState(null);
+  const [showIntro, setShowIntro] = useState(true);
   const { playHover, playNodeSelect, playClick } = useSound();
 
   const [reducedMotion] = useState(() =>
@@ -153,9 +165,19 @@ export default function Graph() {
   );
   const { ref: tiltRef, handlers } = useTilt({ max: 5, scale: 1.01, glare: false });
 
+  /* Guided intro — fades out after 3s */
+  useEffect(() => {
+    if (reducedMotion) {
+      setShowIntro(false);
+      return;
+    }
+    const timeout = setTimeout(() => setShowIntro(false), 3000);
+    return () => clearTimeout(timeout);
+  }, [reducedMotion]);
+
   useEffect(() => {
     if (reducedMotion || selectedNode) return;
-    const t = setInterval(() => setStage((s) => (s + 1) % 7), 800);
+    const t = setInterval(() => setStage((s) => (s + 1) % 7), 2500);
     return () => clearInterval(t);
   }, [reducedMotion, selectedNode]);
 
@@ -187,12 +209,50 @@ export default function Graph() {
   };
 
   return (
-    <div
-      className="graph-panel reveal graph-3d"
-      ref={tiltRef}
-      {...handlers}
-      style={{ cursor: "default", transformStyle: "preserve-3d", padding: "26px 26px 20px" }}
-    >
+    <>
+      {/* ── Mobile Simplified Flow ── */}
+      <div className="mobile-graph" role="img" aria-label="AI agent pipeline flow diagram">
+        <div className="mobile-graph-header">
+          <span className="tag mono">svai.engine · orchestration</span>
+          <span className="live">
+            <span className="pip" />
+            live pipeline
+          </span>
+        </div>
+        <div className="mobile-graph-flow">
+          {MOBILE_STAGES.map((s, i) => (
+            <React.Fragment key={s.id}>
+              <div className="mobile-graph-node">
+                <span className="mobile-graph-label">{s.label}</span>
+                <span className="mobile-graph-role">{s.role}</span>
+              </div>
+              {i < MOBILE_STAGES.length - 1 && (
+                <div className="mobile-graph-arrow" aria-hidden="true">
+                  <svg width="2" height="24" viewBox="0 0 2 24">
+                    <line x1="1" y1="0" x2="1" y2="20" stroke="var(--mint)" strokeWidth="2" strokeDasharray="4 3" />
+                    <polygon points="0,20 2,20 1,24" fill="var(--mint)" />
+                  </svg>
+                </div>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+
+      {/* ── Desktop Full Graph ── */}
+      <div
+        className="graph-panel reveal graph-3d desktop-graph"
+        ref={tiltRef}
+        {...handlers}
+        style={{ cursor: "default", transformStyle: "preserve-3d", padding: "26px 26px 20px" }}
+      >
+        {/* Guided intro tooltip */}
+        {showIntro && (
+          <div className="graph-intro-tooltip" aria-live="polite">
+            <Sparkles size={14} />
+            <span>Follow the data flow →</span>
+          </div>
+        )}
       {/* Glare overlay */}
       <div
         className="tilt-glare"
@@ -523,5 +583,6 @@ export default function Graph() {
         ))}
       </div>
     </div>
+    </>
   );
 }

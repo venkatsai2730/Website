@@ -5,26 +5,26 @@ const steps = [
   {
     ic: <Lightbulb />,
     k: "01",
-    h: "Spot the idea",
-    p: "A real problem we can point agents at — usually one we've felt ourselves.",
+    h: "Identify high-signal problems",
+    p: "Find friction worth automating — validated by real pain, not assumptions. Every product starts from a problem we've hit ourselves.",
   },
   {
     ic: <Rocket />,
     k: "02",
-    h: "Ship a slice",
-    p: "A working product in weeks, in front of real users — not a mockup.",
+    h: "Ship to real users in weeks",
+    p: "Working product, not a prototype. Full lifecycle: auth, data pipeline, CI/CD, containerized deployment — live from day one.",
   },
   {
     ic: <Activity />,
     k: "03",
-    h: "Listen & sharpen",
-    p: "We keep what gets used and cut what doesn't. The product earns its place.",
+    h: "Measure, don't guess",
+    p: "Regression harnesses gate every deploy. Quality is tracked with evaluation benchmarks — changes ship only when metrics improve.",
   },
   {
     ic: <Repeat />,
     k: "04",
-    h: "Run it as a subscription",
-    p: "Winners become products you subscribe to — and they keep getting better.",
+    h: "Scale what earns its place",
+    p: "Products that retain users become subscriptions. The rest get cut. No roadmap theater — just compounding iteration.",
   },
 ];
 
@@ -65,10 +65,10 @@ export default function HowItWorks() {
       <div className="wrap">
         <div className="sec-head reveal">
           <span className="eyebrow">The model</span>
-          <h2>Idea to subscription, on repeat.</h2>
+          <h2>Ship fast. Measure everything. Keep what works.</h2>
           <p>
-            We don't sell slideware or six-month roadmaps. We build, ship, and let real usage
-            decide what's worth keeping.
+            No six-month roadmaps. Every product is deployed, instrumented, and evaluated
+            against live usage data before it earns a subscription.
           </p>
         </div>
         <div className="loop" style={{ perspective: "1200px" }}>

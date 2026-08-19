@@ -44,11 +44,10 @@ export default function Products() {
       <div className="wrap">
         <div className="sec-head reveal">
           <span className="eyebrow">The lineup</span>
-          <h2>One studio. A growing shelf of products.</h2>
+          <h2>Products shipping today. More in the pipeline.</h2>
           <p>
-            From a live career platform to a mobile assistant and a small language model we're
-            training from scratch — here's the shelf, and it keeps growing. One subscription
-            unlocks everything new we ship.
+            Each product solves a specific problem end-to-end — from data ingestion to
+            user-facing output. Built solo, deployed in production, measured against real usage.
           </p>
         </div>
 
@@ -56,7 +55,10 @@ export default function Products() {
           {/* Flagship — lead card */}
           <TiltCard className="lead reveal" style={{}}>
             <div className="prod-top">
-              <span className="pill live">Live · subscriptions open</span>
+              <span className="pill live">
+                <span className="pulse-dot" aria-hidden="true" />
+                Live · subscriptions open
+              </span>
               <span className="mono" style={{ fontSize: "12.5px", color: "var(--muted-2)" }}>
                 product 01
               </span>
@@ -72,9 +74,12 @@ export default function Products() {
                   <h3 className="prod-title-link">Job-Skill AI</h3>
                 </a>
                 <p className="blurb" style={{ marginBottom: "4px" }}>
-                  An end-to-end career platform powered by an eleven-node agent graph. It reads
-                  your resume, scores it against real ATS engines, finds matching jobs, writes the
-                  cover letter, and preps you for the interview — all in one conversation.
+                  Production-grade job matching engine. 11-node LangGraph agentic workflow
+                  with intent routing, multi-provider LLM routing (Claude/Gemini/Groq/Mistral)
+                  with automatic fallback, and Qdrant-backed hybrid RAG. Achieves <strong>sub-200ms
+                  latency</strong> across 10+ job sources with 5 enterprise ATS integrations.
+                  Fully deployed: auth, Postgres, scheduled ingestion, React/TS frontend, Docker,
+                  CI/CD—designed, built, and shipped solo.
                 </p>
                 <div className="prod-cta">
                   <a
@@ -89,11 +94,12 @@ export default function Products() {
               </div>
               <ul className="feat-list">
                 {[
-                  "Three-phase ATS scoring across 5 engines",
-                  "Hybrid job ranking from a Qdrant vector index",
-                  "Multi-turn chat that routes to the right agent",
-                  "Cover letters written for the exact job",
-                  "LinkedIn optimizer & interview prep",
+                  "Sub-200ms matching latency across 11-node agentic workflow",
+                  "ATS scoring for Greenhouse, Lever, Ashby, Workday, Naukri (5+ engines)",
+                  "Hybrid dense+sparse Qdrant retrieval with semantic re-ranking",
+                  "Multi-provider LLM routing with graceful fallback under degradation",
+                  "Regression harness (Claude Code + MCP) gates every deploy on metrics",
+                  "Scheduled ingestion from 10+ sources → Postgres + vector index",
                 ].map((f) => (
                   <li key={f}><Check /> {f}</li>
                 ))}
@@ -102,46 +108,51 @@ export default function Products() {
           </TiltCard>
 
           {/* AI Assistant — mobile */}
-          <TiltCard className="reveal" style={{}}>
+          <TiltCard className="upcoming reveal" style={{}}>
             <div className="icrow">
               <span><Smartphone /></span>
               <span><Sparkles /></span>
             </div>
             <div className="prod-top">
-              <span className="pill build">In development</span>
+              <span className="pill build">In development · core architecture complete</span>
             </div>
             <h3>Daily AI Assistant</h3>
             <p className="blurb">
-              A mobile assistant that takes the friction out of everyday life — plan your day,
-              remember what matters, draft the message, get the small stuff done. Built to
-              actually do things, not just chat back.
+              Action-first mobile agent — executes tasks (scheduling, drafting, reminders)
+              rather than just responding. On-device intent classification routes to
+              specialized tool-calling agents. Targeting &lt;300ms time-to-first-action.
             </p>
             <div className="chips">
               <span className="chip">iOS &amp; Android</span>
-              <span className="chip">on-the-go</span>
+              <span className="chip">on-device routing</span>
+              <span className="chip">tool-calling agents</span>
             </div>
           </TiltCard>
 
           {/* PythonOS */}
-          <TiltCard className="reveal" style={{}}>
+          <TiltCard className="upcoming reveal" style={{}}>
             <div className="icrow">
               <span><Cpu /></span>
               <span><Code2 /></span>
             </div>
             <div className="prod-top">
-              <span className="pill concept">In research</span>
+              <span className="pill concept">Research · training Q3</span>
             </div>
-            <h3>PythonOS · 1B</h3>
+            <h3>PythonOS-1B</h3>
             <p className="blurb">
-              A small language model we're building from scratch — a Python specialist across
-              algorithms, ML &amp; GenAI, agentic AI, and CS theory. Frontier-model techniques at
-              a footprint that fits one GPU. Architecture locked; training next.
+              Custom Mixture-of-Experts transformer built from first principles. Designed for
+              efficient Python code understanding with top-2 gating, expert balancing loss, and
+              RoPE embeddings for 32K context. Complete pre-training pipeline: MinHash dedup,
+              BPE tokenizer training, quality scoring on Python corpora. Targets <strong>single-GPU
+              inference</strong> with <strong>multi-GPU distributed training (FSDP)</strong>.
             </p>
             <div className="chips">
-              <span className="chip">~2B active params</span>
-              <span className="chip">32K context</span>
-              <span className="chip">single-GPU</span>
-              <span className="chip">Python-native</span>
+              <span className="chip">~2B active params (MoE)</span>
+              <span className="chip">32K context window</span>
+              <span className="chip">RoPE positional embeddings</span>
+              <span className="chip">top-2 gating + expert balancing</span>
+              <span className="chip">MinHash + BPE pipeline</span>
+              <span className="chip">FSDP distributed training</span>
             </div>
           </TiltCard>
 

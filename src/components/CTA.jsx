@@ -52,11 +52,12 @@ export default function CTA() {
     <section className="block" id="roadmap">
       <div className="wrap">
         <div className="cta reveal" id="contact">
-          <span className="eyebrow">Get started</span>
-          <h2 style={{ marginTop: "14px" }}>Start exploring our AI product studio.</h2>
+          <span className="eyebrow">Shape what's next</span>
+          <h2 style={{ marginTop: "14px" }}>What problem should we build for you?</h2>
           <p>
-            Explore Job-Skill AI today, or tell us what you'd build next — the products on this page
-            started exactly that way.
+            Job-Skill AI solved a real problem for job seekers. PythonOS-1B is built for
+            Python code understanding. What's the next high-signal problem worth solving?
+            Tell us—the most-requested ideas jump the queue.
           </p>
           <div className="cta-actions">
             <a
@@ -65,7 +66,7 @@ export default function CTA() {
               onMouseEnter={playHover}
               onClick={scrollToProducts}
             >
-              See the products <ArrowRight size={17} />
+              Explore Job-Skill AI <ArrowRight size={17} />
             </a>
           </div>
 

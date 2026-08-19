@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Products from "./components/Products";
 import HowItWorks from "./components/HowItWorks";
+import About from "./components/About";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 
@@ -49,7 +50,13 @@ export default function App() {
       {/* Hero Section (includes Three.js particle field) */}
       <Hero />
 
-      {/* Technology Stack Strip */}
+      {/* Studio Model (How It Works) — sets context before showing products */}
+      <HowItWorks />
+
+      {/* Products Shelf — the proof */}
+      <Products />
+
+      {/* Technology Stack Strip — credibility after they've seen what you build */}
       <div className="strip">
         <div className="wrap strip-inner">
           <span className="lab">Our stack</span>
@@ -61,14 +68,10 @@ export default function App() {
         </div>
       </div>
 
-      {/* Products Shelf */}
-      <Products />
+      {/* About the Builder — personal trust, breaks visual rhythm */}
+      <About />
 
-      {/* Studio Model (How It Works) */}
-      <HowItWorks />
-
-
-      {/* CTA & Roadmap Section */}
+      {/* CTA & Roadmap Section — single clear action point */}
       <CTA />
 
       {/* Footer Section */}
