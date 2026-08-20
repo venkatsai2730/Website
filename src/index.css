@@ -136,25 +136,36 @@ body {
 .brand {
   display: flex;
   align-items: center;
-  gap: 11px;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 800;
-  font-size: 21px;
-  letter-spacing: -.03em;
+  gap: 10px;
   cursor: pointer;
 }
 
-.brand .bdot {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--mint);
-  box-shadow: 0 0 14px var(--mint);
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  filter: drop-shadow(0 0 12px rgba(139, 123, 255, .38));
 }
 
-.brand b {
-  color: var(--mint);
+.brand-orbit {
+  transform-origin: 64px 64px;
+  transition: transform .55s cubic-bezier(.2, .8, .3, 1);
+}
+
+.brand:hover .brand-orbit {
+  transform: rotate(22deg);
+}
+
+.brand-word {
+  font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 800;
+  font-size: 18px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  background: linear-gradient(95deg, #E4EAFF 0%, #8B7BFF 58%, #A855F7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .nav-links {
@@ -922,8 +933,8 @@ body {
   gap: 18px;
 }
 
-.foot .brand {
-  font-size: 18px;
+.footer .brand-word {
+  font-size: 17px;
 }
 
 .foot .tagline {
@@ -1014,6 +1025,14 @@ body {
   }
   .cta {
     padding: 34px 24px;
+  }
+  .brand-mark {
+    width: 28px;
+    height: 28px;
+  }
+  .brand-word {
+    font-size: 15.5px;
+    letter-spacing: .1em;
   }
 }
 

@@ -1,0 +1,10 @@
+# Local secrets for `wrangler dev`. Copy to `.dev.vars` (gitignored) and fill in.
+# In production these are set as encrypted secrets in the Cloudflare dashboard
+# or via `wrangler secret put <NAME>` — never in wrangler.jsonc.
+
+# Neon POOLED connection string (the hostname contains "-pooler").
+DATABASE_URL="postgresql://user:password@ep-xxxx-pooler.region.aws.neon.tech/neondb?sslmode=require"
+
+# Optional. Unset means GET /api/waitlist and GET /api/suggestions return 404.
+# Generate one with:  node -e "console.log(crypto.randomUUID())"
+ADMIN_TOKEN=""

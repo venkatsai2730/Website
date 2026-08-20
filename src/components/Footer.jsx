@@ -37,7 +37,7 @@ export default function Footer() {
                 <GitBranch size={18} />
               </a>
               <a
-                href="mailto:hello@svai.dev"
+                href="mailto:hello@zorivalls.com"
                 className="foot-social-link"
                 aria-label="Email"
               >
@@ -103,7 +103,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="foot-bottom">
-          <span className="foot-copy">© {year} svAI Solutions. Built, deployed, and maintained solo by Venkat Sai.</span>
+          <span className="foot-copy">© {year} Zorivalls. Built, deployed, and maintained solo by Venkat Sai.</span>
           <span className="foot-built-with mono">
             LangGraph · Claude API · React/TS · Postgres · Qdrant · Docker · FSDP
           </span>

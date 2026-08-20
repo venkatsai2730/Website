@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "zorivalls",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-08-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // The Vite build output is served straight from Cloudflare's asset layer.
+  // `run_worker_first` keeps /api/* on the Worker; everything else is a static
+  // hit that never invokes (or bills) the Worker. SPA fallback sends unknown
+  // paths to index.html so client-side anchors keep working.
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+
+  "observability": {
+    "enabled": true
+  }
+
+  // Secrets are NOT declared here — they would be committed in plaintext.
+  // Set them with `wrangler secret put <NAME>` or in the dashboard:
+  //   DATABASE_URL  (required)  Neon pooled connection string
+  //   ADMIN_TOKEN   (optional)  unlocks the admin list endpoints
+}

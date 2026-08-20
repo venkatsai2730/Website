@@ -213,7 +213,7 @@ export default function Graph() {
       {/* ── Mobile Simplified Flow ── */}
       <div className="mobile-graph" role="img" aria-label="AI agent pipeline flow diagram">
         <div className="mobile-graph-header">
-          <span className="tag mono">svai.engine · orchestration</span>
+          <span className="tag mono">zorivalls.engine · orchestration</span>
           <span className="live">
             <span className="pip" />
             live pipeline
@@ -270,7 +270,7 @@ export default function Graph() {
       {/* Header with interact hint */}
       <div className="graph-head" style={{ position: "relative", zIndex: 1, marginBottom: 14 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <span className="tag mono">svai.engine · orchestration</span>
+          <span className="tag mono">zorivalls.engine · orchestration</span>
           <span className="graph-hint-pill">
             <Sparkles size={12} /> Click any node to inspect
           </span>

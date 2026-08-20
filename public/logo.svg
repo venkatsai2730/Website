@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none" role="img" aria-label="Zorivalls">
+  <defs>
+    <linearGradient id="zvRing" x1="6" y1="69" x2="112" y2="31" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2F6BFF" />
+      <stop offset=".55" stop-color="#6A5BFF" />
+      <stop offset="1" stop-color="#A855F7" />
+    </linearGradient>
+    <linearGradient id="zvNet" x1="12" y1="92" x2="56" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2F6BFF" />
+      <stop offset="1" stop-color="#8B5CF6" />
+    </linearGradient>
+    <linearGradient id="zvZ" x1="26" y1="24" x2="86" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8FB4FF" />
+      <stop offset=".45" stop-color="#3B6BF5" />
+      <stop offset="1" stop-color="#1E3A8A" />
+    </linearGradient>
+    <linearGradient id="zvV" x1="56" y1="44" x2="106" y2="103" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C084FC" />
+      <stop offset=".5" stop-color="#8B3BFF" />
+      <stop offset="1" stop-color="#5B21B6" />
+    </linearGradient>
+    <linearGradient id="zvPix" x1="88" y1="60" x2="126" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B3BFF" />
+      <stop offset="1" stop-color="#8B3BFF" stop-opacity=".15" />
+    </linearGradient>
+    <radialGradient id="zvOrb" cx=".35" cy=".3" r=".8">
+      <stop offset="0" stop-color="#D8B4FE" />
+      <stop offset="1" stop-color="#7C22CE" />
+    </radialGradient>
+  </defs>
+
+  <!-- orbit arc + terminal sphere -->
+  <path d="M6.2 69.1A58 58 0 0 1 111.5 30.7" stroke="url(#zvRing)" stroke-width="2.4" stroke-linecap="round" />
+  <path d="M9.5 82.5a58 58 0 0 0 5.6 9.4" stroke="url(#zvRing)" stroke-width="1.6" stroke-linecap="round" opacity=".5" />
+  <circle cx="111.5" cy="30.7" r="5.6" fill="url(#zvOrb)" />
+
+  <!-- neural mesh -->
+  <g stroke="url(#zvNet)" stroke-width="1" opacity=".85">
+    <path d="M13 60 19 45M13 60 23 75M13 60 33 61M19 45 30 35M19 45 33 61M23 75 33 61M23 75 17 88M23 75 43 80M30 35 41 49M30 35 45 30M33 61 41 49M33 61 47 65M33 61 53 56M29 90 23 75M29 90 43 80M29 90 17 88M41 49 51 39M41 49 47 65M43 80 47 65M43 80 52 89M47 65 53 56M51 39 53 56M51 39 45 30M53 56 52 89" />
+  </g>
+  <g fill="url(#zvNet)">
+    <circle cx="13" cy="60" r="2.7" />
+    <circle cx="19" cy="45" r="2.2" />
+    <circle cx="23" cy="75" r="2.6" />
+    <circle cx="30" cy="35" r="2.2" />
+    <circle cx="33" cy="61" r="2.9" />
+    <circle cx="29" cy="90" r="2.3" />
+    <circle cx="41" cy="49" r="2.1" />
+    <circle cx="43" cy="80" r="2.4" />
+    <circle cx="47" cy="65" r="1.9" />
+    <circle cx="51" cy="39" r="1.8" />
+    <circle cx="53" cy="56" r="2.1" />
+    <circle cx="52" cy="89" r="1.7" />
+    <circle cx="17" cy="88" r="1.9" />
+    <circle cx="45" cy="30" r="1.7" />
+  </g>
+
+  <!-- pixel dissolve -->
+  <g fill="url(#zvPix)">
+    <rect x="88" y="57" width="7" height="7" rx="1" />
+    <rect x="92" y="71" width="6" height="6" rx="1" />
+    <rect x="97" y="47" width="5" height="5" rx="1" />
+    <rect x="99" y="63" width="6" height="6" rx="1" />
+    <rect x="99" y="90" width="4" height="4" rx="1" />
+    <rect x="103" y="82" width="5" height="5" rx="1" />
+    <rect x="105" y="55" width="4.5" height="4.5" rx="1" />
+    <rect x="108" y="70" width="4" height="4" rx="1" />
+    <rect x="110" y="42" width="4" height="4" rx="1" />
+    <rect x="108" y="95" width="3" height="3" rx="1" />
+    <rect x="112" y="86" width="3.5" height="3.5" rx="1" />
+    <rect x="114" y="60" width="3.5" height="3.5" rx="1" />
+    <rect x="116" y="50" width="3" height="3" rx="1" />
+    <rect x="117" y="76" width="3" height="3" rx="1" />
+    <rect x="119" y="67" width="2.5" height="2.5" rx=".8" />
+    <rect x="121" y="57" width="2.5" height="2.5" rx=".8" />
+    <rect x="122" y="83" width="2" height="2" rx=".6" />
+    <rect x="124" y="71" width="2" height="2" rx=".6" />
+  </g>
+
+  <!-- ZV monogram -->
+  <path d="M26 24H86v14L48 82h38v14H24V82l38-44H26z" fill="url(#zvZ)" />
+  <path d="M56 44h16l9 35 9-35h16l-17 59H73z" fill="url(#zvV)" />
+
+  <!-- spark -->
+  <path d="M78 42q3 13 14 16-11 3-14 16-3-13-14-16 11-3 14-16z" fill="#BFDBFE" opacity=".95" />
+</svg>
