@@ -73,14 +73,7 @@ export default function Footer() {
               Job-Skill AI <ArrowUpRight size={12} />
             </a>
             <span className="foot-nav-link muted">Daily Assistant <span className="foot-badge">Q3</span></span>
-            <a
-              href="https://github.com/venkatsai2730/PythonOS-1B"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="foot-nav-link"
-            >
-              PythonOS-1B <ArrowUpRight size={12} />
-            </a>
+            <span className="foot-nav-link muted">PythonOS-1B <span className="foot-badge">Q3</span></span>
           </div>
 
           {/* Status column */}
