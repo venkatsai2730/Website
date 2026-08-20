@@ -141,28 +141,27 @@ body {
 }
 
 .brand-mark {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   flex: none;
-  filter: drop-shadow(0 0 12px rgba(139, 123, 255, .38));
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(139, 123, 255, .32));
+  transition: transform .5s cubic-bezier(.2, .8, .3, 1);
 }
 
-.brand-orbit {
-  transform-origin: 64px 64px;
-  transition: transform .55s cubic-bezier(.2, .8, .3, 1);
+.brand:hover .brand-mark {
+  transform: rotate(8deg) scale(1.06);
 }
 
-.brand:hover .brand-orbit {
-  transform: rotate(22deg);
-}
-
+/* The logo's wordmark runs navy -> purple. Navy is invisible on --ink, so the
+   left stop is lifted to a readable blue while keeping the same sweep. */
 .brand-word {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  letter-spacing: .13em;
+  font-family: 'Orbitron', 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: 16.5px;
+  letter-spacing: .16em;
   text-transform: uppercase;
-  background: linear-gradient(95deg, #E4EAFF 0%, #8B7BFF 58%, #A855F7 100%);
+  background: linear-gradient(95deg, #6E8BFF 0%, #8B5CF6 55%, #A855F7 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -1031,8 +1030,8 @@ body {
     height: 28px;
   }
   .brand-word {
-    font-size: 15.5px;
-    letter-spacing: .1em;
+    font-size: 13.5px;
+    letter-spacing: .12em;
   }
 }
 
