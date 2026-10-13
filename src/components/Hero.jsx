@@ -1,7 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import Graph from "./Graph";
-import ParticleField from "./ParticleField";
 import useSound from "../hooks/useSound";
 
 export default function Hero() {
@@ -17,11 +16,6 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      {/* Three.js particle background */}
-      <div className="hero-canvas-wrap">
-        <ParticleField />
-      </div>
-
       <div className="wrap" style={{ position: "relative", zIndex: 1 }}>
         <div className="hero-copy reveal">
           <span className="eyebrow">AI product studio</span>

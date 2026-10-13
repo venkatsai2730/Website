@@ -158,28 +158,20 @@ export default function Graph() {
   const [showIntro, setShowIntro] = useState(true);
   const { playHover, playNodeSelect, playClick } = useSound();
 
-  const [reducedMotion] = useState(() =>
-    typeof window !== "undefined"
-      ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
-      : false
-  );
+  const [reducedMotion] = useState(false);
   const { ref: tiltRef, handlers } = useTilt({ max: 5, scale: 1.01, glare: false });
 
   /* Guided intro — fades out after 3s */
   useEffect(() => {
-    if (reducedMotion) {
-      setShowIntro(false);
-      return;
-    }
     const timeout = setTimeout(() => setShowIntro(false), 3000);
     return () => clearTimeout(timeout);
-  }, [reducedMotion]);
+  }, []);
 
   useEffect(() => {
-    if (reducedMotion || selectedNode) return;
+    if (selectedNode) return;
     const t = setInterval(() => setStage((s) => (s + 1) % 7), 2500);
     return () => clearInterval(t);
-  }, [reducedMotion, selectedNode]);
+  }, [selectedNode]);
 
   const activeNode = selectedNode || NODES.find((n) => n.stage === stage) || NODES[0];
 

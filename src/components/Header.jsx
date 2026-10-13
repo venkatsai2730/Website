@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ArrowRight, Menu, X, Volume2, VolumeX } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import Brand from "./Brand";
 import { NAV } from "../data/constants";
 import useSound from "../hooks/useSound";
@@ -7,7 +7,7 @@ import useSound from "../hooks/useSound";
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menu, setMenu] = useState(false);
-  const { enabled: soundOn, toggle: toggleSound, playHover, playClick } = useSound();
+  const { playHover, playClick } = useSound();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -45,21 +45,7 @@ export default function Header() {
             ))}
           </div>
 
-          <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-            {/* Sound Toggle Button */}
-            <button
-              className={"sound-btn" + (soundOn ? " on" : " off")}
-              onClick={() => {
-                toggleSound();
-              }}
-              onMouseEnter={playHover}
-              aria-label={soundOn ? "Mute audio effects" : "Unmute audio effects"}
-              title={soundOn ? "Sound Effects: ON (Click to mute)" : "Sound Effects: MUTED (Click to unmute)"}
-            >
-              {soundOn ? <Volume2 size={16} /> : <VolumeX size={16} />}
-              <span className="sound-label mono">{soundOn ? "FX ON" : "MUTED"}</span>
-            </button>
-
+          <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
             <a
               href="#products"
               className="btn btn-primary"

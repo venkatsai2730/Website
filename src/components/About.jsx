@@ -81,12 +81,12 @@ export default function About() {
               <div className="about-stats-row">
                 <div className="about-stat">
                   <Star size={16} className="about-stat-icon" />
-                  <span className="about-stat-value">★</span>
-                  <span className="about-stat-label">Stars</span>
+                  <span className="about-stat-value">GitHub</span>
+                  <span className="about-stat-label">Open Source</span>
                 </div>
                 <div className="about-stat">
                   <GitCommit size={16} className="about-stat-icon" />
-                  <span className="about-stat-value">●●●</span>
+                  <span className="about-stat-value">Daily</span>
                   <span className="about-stat-label">Commits</span>
                 </div>
                 <div className="about-stat-badge">

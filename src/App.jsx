@@ -16,7 +16,6 @@ export default function App() {
   const glowM = useRef(null);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     let raf;
     const onScroll = () => {
       raf = requestAnimationFrame(() => {
