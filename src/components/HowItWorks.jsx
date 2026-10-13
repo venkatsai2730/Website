@@ -12,7 +12,7 @@ const steps = [
     ic: <Rocket />,
     k: "02",
     h: "Ship to real users in weeks",
-    p: "Working product, not a prototype. Full lifecycle: auth, data pipeline, CI/CD, containerized deployment — live from day one.",
+    p: "Working product, not a prototype. Full lifecycle: auth, data pipeline, CI/CD, containerized deployment — built to go live from day one.",
   },
   {
     ic: <Activity />,
@@ -68,7 +68,7 @@ export default function HowItWorks() {
           <h2>Ship fast. Measure everything. Keep what works.</h2>
           <p>
             No six-month roadmaps. Every product is deployed, instrumented, and evaluated
-            against live usage data before it earns a subscription.
+            against real usage data before it earns a subscription.
           </p>
         </div>
         <div className="loop" style={{ perspective: "1200px" }}>

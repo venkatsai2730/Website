@@ -13,7 +13,7 @@ export default function Brand() {
         height="128"
         decoding="async"
       />
-      <span className="brand-word">Zorivalls</span>
+      <span className="brand-word">Velalyn</span>
     </div>
   );
 }

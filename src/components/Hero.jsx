@@ -31,10 +31,10 @@ export default function Hero() {
             <span className="accent">faster than you thought possible.</span>
           </h1>
           <p className="lede">
-            Building agent-powered products that work in production. Job-Skill AI is live with
-            sub-200ms latency across an 11-node LangGraph workflow with multi-provider LLM routing
-            and hybrid RAG. PythonOS-1B (custom MoE transformer, 2B params, 32K context) training
-            Q3. Measured against real usage, not benchmarks. Deployed solo, scaled with care.
+            Building agent-powered products designed for production. Job-Skill AI is in final
+            testing and launching soon: an 11-node LangGraph workflow with multi-provider LLM
+            routing and hybrid RAG. PythonOS-1B (custom MoE transformer, 2B params, 32K context)
+            training Q3. Built solo, tested carefully, scaled with care.
           </p>
           <div className="hero-actions">
             <a

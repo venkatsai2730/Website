@@ -2,7 +2,7 @@ import { neon } from "@neondatabase/serverless";
 import { validateWaitlist, validateSuggestion, parsePaging } from "./validate.js";
 
 /**
- * Cloudflare Worker serving the Zorivalls API.
+ * Cloudflare Worker serving the Velalyn API.
  *
  * Mirrors backend/src/index.js, but on the Workers runtime: no TCP sockets,
  * so Postgres is reached over Neon's HTTP driver instead of `pg`.

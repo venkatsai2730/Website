@@ -55,7 +55,7 @@ async function boot() {
     await waitForDB();
     await migrate();
     const server = app.listen(PORT, () => {
-      console.log(`[api] svAI backend running on port ${PORT} ✓`);
+      console.log(`[api] Velalyn backend running on port ${PORT} ✓`);
     });
 
     /* Graceful shutdown */

@@ -44,10 +44,10 @@ export default function Products() {
       <div className="wrap">
         <div className="sec-head reveal">
           <span className="eyebrow">The lineup</span>
-          <h2>Products shipping today. More in the pipeline.</h2>
+          <h2>Products shipping soon. More in the pipeline.</h2>
           <p>
             Each product solves a specific problem end-to-end — from data ingestion to
-            user-facing output. Built solo, deployed in production, measured against real usage.
+            user-facing output. Built solo, currently in testing ahead of launch.
           </p>
         </div>
 
@@ -55,9 +55,8 @@ export default function Products() {
           {/* Flagship — lead card */}
           <TiltCard className="lead reveal" style={{}}>
             <div className="prod-top">
-              <span className="pill live">
-                <span className="pulse-dot" aria-hidden="true" />
-                Live · subscriptions open
+              <span className="pill build">
+                In testing · launching soon
               </span>
               <span className="mono" style={{ fontSize: "12.5px", color: "var(--muted-2)" }}>
                 product 01
@@ -74,12 +73,12 @@ export default function Products() {
                   <h3 className="prod-title-link">Job-Skill AI</h3>
                 </a>
                 <p className="blurb" style={{ marginBottom: "4px" }}>
-                  Production-grade job matching engine. 11-node LangGraph agentic workflow
-                  with intent routing, multi-provider LLM routing (Claude/Gemini/Groq/Mistral)
-                  with automatic fallback, and Qdrant-backed hybrid RAG. Achieves <strong>sub-200ms
-                  latency</strong> across 10+ job sources with 5 enterprise ATS integrations.
-                  Fully deployed: auth, Postgres, scheduled ingestion, React/TS frontend, Docker,
-                  CI/CD—designed, built, and shipped solo.
+                  Job matching engine, now in testing and launching shortly. 11-node LangGraph
+                  agentic workflow with intent routing, multi-provider LLM routing
+                  (Claude/Gemini/Groq/Mistral) with automatic fallback, and Qdrant-backed hybrid
+                  RAG. Built with auth, Postgres, scheduled ingestion, React/TS frontend, Docker,
+                  and CI/CD—designed and built solo. We're validating latency and ATS integrations
+                  before going live.
                 </p>
                 <div className="prod-cta">
                   <a
@@ -94,8 +93,8 @@ export default function Products() {
               </div>
               <ul className="feat-list">
                 {[
-                  "Sub-200ms matching latency across 11-node agentic workflow",
-                  "ATS scoring for Greenhouse, Lever, Ashby, Workday, Naukri (5+ engines)",
+                  "Targeting sub-200ms matching latency across 11-node agentic workflow",
+                  "ATS scoring for Greenhouse, Lever, Ashby, Workday, Naukri (in testing)",
                   "Hybrid dense+sparse Qdrant retrieval with semantic re-ranking",
                   "Multi-provider LLM routing with graceful fallback under degradation",
                   "Regression harness (Claude Code + MCP) gates every deploy on metrics",
@@ -138,7 +137,14 @@ export default function Products() {
             <div className="prod-top">
               <span className="pill concept">Research · training Q3</span>
             </div>
-            <h3>PythonOS-1B</h3>
+            <a
+              href="https://github.com/venkatsai2730/PythonOs"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <h3 className="prod-title-link">PythonOS-1B</h3>
+            </a>
             <p className="blurb">
               Custom Mixture-of-Experts transformer built from first principles. Designed for
               efficient Python code understanding with top-2 gating, expert balancing loss, and
@@ -153,6 +159,16 @@ export default function Products() {
               <span className="chip">top-2 gating + expert balancing</span>
               <span className="chip">MinHash + BPE pipeline</span>
               <span className="chip">FSDP distributed training</span>
+            </div>
+            <div className="prod-cta" style={{ marginTop: "18px" }}>
+              <a
+                href="https://github.com/venkatsai2730/PythonOs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost"
+              >
+                View on GitHub <ArrowUpRight size={16} />
+              </a>
             </div>
           </TiltCard>
 

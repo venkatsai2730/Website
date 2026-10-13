@@ -23,8 +23,8 @@ export default function Footer() {
           <div className="foot-brand-col">
             <Brand />
             <p className="foot-desc">
-              Production AI products built end-to-end by a single engineer. Architected,
-              deployed, instrumented. Shipped fast. Measured against real metrics.
+              AI products built end-to-end by a single engineer. Architected,
+              built, instrumented. Currently testing ahead of launch.
             </p>
             <div className="foot-social">
               <a
@@ -37,7 +37,7 @@ export default function Footer() {
                 <GitBranch size={18} />
               </a>
               <a
-                href="mailto:hello@zorivalls.com"
+                href="mailto:hello@velalyn.com"
                 className="foot-social-link"
                 aria-label="Email"
               >
@@ -96,7 +96,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="foot-bottom">
-          <span className="foot-copy">© {year} Zorivalls. Built, deployed, and maintained solo by Venkat Sai.</span>
+          <span className="foot-copy">© {year} Velalyn. Built, deployed, and maintained solo by Venkat Sai.</span>
           <span className="foot-built-with mono">
             LangGraph · Claude API · React/TS · Postgres · Qdrant · Docker · FSDP
           </span>

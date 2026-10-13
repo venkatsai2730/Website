@@ -61,7 +61,7 @@ export default function App() {
         <div className="wrap strip-inner">
           <span className="lab">Our stack</span>
           <div className="stack">
-            {["LangGraph", "Claude", "Qdrant", "Supabase", "React", "Node"].map((s) => (
+            {["Python", "LangGraph", "Claude", "Qdrant", "Supabase", "React", "Node"].map((s) => (
               <span key={s} className="stack-item">{s}</span>
             ))}
           </div>

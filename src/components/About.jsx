@@ -18,15 +18,16 @@ const CREDENTIALS = [
 const PROJECTS = [
   {
     name: "Job-Skill AI",
-    desc: "11-node LangGraph workflow, sub-200ms latency, 5+ ATS integrations, multi-provider LLM routing",
-    status: "live",
-    statusLabel: "Live",
+    desc: "11-node LangGraph workflow, multi-provider LLM routing, ATS integrations. Currently in testing",
+    status: "research",
+    statusLabel: "Launching soon",
   },
   {
     name: "PythonOS-1B",
     desc: "Custom MoE transformer, 2B active params, 32K context, FSDP distributed training, MinHash pipeline",
     status: "research",
     statusLabel: "Training Q3",
+    url: "https://github.com/venkatsai2730/PythonOs",
   },
 ];
 
@@ -102,7 +103,19 @@ export default function About() {
                 {PROJECTS.map((p) => (
                   <div key={p.name} className="about-project-card">
                     <div className="about-project-info">
-                      <span className="about-project-name">{p.name}</span>
+                      {p.url ? (
+                        <a
+                          href={p.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="about-project-name"
+                          style={{ textDecoration: "none" }}
+                        >
+                          {p.name}
+                        </a>
+                      ) : (
+                        <span className="about-project-name">{p.name}</span>
+                      )}
                       <span className="about-project-desc">{p.desc}</span>
                     </div>
                     <span className={`about-project-status ${p.status}`}>

@@ -1,7 +1,7 @@
 {
   "name": "svai-backend",
   "version": "1.0.0",
-  "description": "svAI Solutions API server",
+  "description": "Velalyn API server",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
