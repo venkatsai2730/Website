@@ -47,10 +47,10 @@ export default function Footer() {
                 <LinkedinIcon size={18} />
               </a>
               <a
-                href="mailto:founder@velalyn.com"
+                href="mailto:venkatsai.anilkumar@velalyn.com"
                 className="foot-social-link"
-                aria-label="Email: founder@velalyn.com"
-                title="founder@velalyn.com"
+                aria-label="Email: venkatsai.anilkumar@velalyn.com"
+                title="venkatsai.anilkumar@velalyn.com"
               >
                 <Mail size={18} />
               </a>
@@ -95,10 +95,10 @@ export default function Footer() {
               <span>All systems operational</span>
             </div>
             <a
-              href="mailto:founder@velalyn.com"
+              href="mailto:venkatsai.anilkumar@velalyn.com"
               className="foot-nav-link"
             >
-              founder@velalyn.com <ArrowUpRight size={12} />
+              venkatsai.anilkumar@velalyn.com <ArrowUpRight size={12} />
             </a>
             <a
               href="https://www.linkedin.com/company/velalyn/jobs/?viewAsMember=true"

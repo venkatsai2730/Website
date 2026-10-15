@@ -94,11 +94,11 @@ export default function CTA() {
               <LinkedinIcon size={14} /> Velalyn on LinkedIn
             </a>
             <a
-              href="mailto:founder@velalyn.com"
+              href="mailto:venkatsai.anilkumar@velalyn.com"
               className="cta-contact-pill"
               onMouseEnter={playHover}
             >
-              <Mail size={14} /> founder@velalyn.com
+              <Mail size={14} /> venkatsai.anilkumar@velalyn.com
             </a>
           </div>
 
