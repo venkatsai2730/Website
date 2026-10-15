@@ -1,6 +1,7 @@
 import React from "react";
 import { GitBranch, Mail, ArrowUpRight } from "lucide-react";
 import Brand from "./Brand";
+import LinkedinIcon from "./LinkedinIcon";
 import { NAV } from "../data/constants";
 
 export default function Footer() {
@@ -37,9 +38,19 @@ export default function Footer() {
                 <GitBranch size={18} />
               </a>
               <a
-                href="mailto:hello@velalyn.com"
+                href="https://www.linkedin.com/company/velalyn/jobs/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="foot-social-link"
-                aria-label="Email"
+                aria-label="LinkedIn"
+              >
+                <LinkedinIcon size={18} />
+              </a>
+              <a
+                href="mailto:founder@velalyn.com"
+                className="foot-social-link"
+                aria-label="Email: founder@velalyn.com"
+                title="founder@velalyn.com"
               >
                 <Mail size={18} />
               </a>
@@ -76,13 +87,27 @@ export default function Footer() {
             <span className="foot-nav-link muted">PythonOS-1B <span className="foot-badge">Q3</span></span>
           </div>
 
-          {/* Status column */}
+          {/* Connect & Status column */}
           <div className="foot-nav-col">
-            <h4 className="foot-col-title">Status</h4>
+            <h4 className="foot-col-title">Connect</h4>
             <div className="foot-status">
               <span className="foot-status-dot live" />
               <span>All systems operational</span>
             </div>
+            <a
+              href="mailto:founder@velalyn.com"
+              className="foot-nav-link"
+            >
+              founder@velalyn.com <ArrowUpRight size={12} />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/velalyn/jobs/?viewAsMember=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="foot-nav-link"
+            >
+              LinkedIn Careers <ArrowUpRight size={12} />
+            </a>
             <a
               href="https://github.com/venkatsai2730"
               target="_blank"

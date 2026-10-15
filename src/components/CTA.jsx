@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { ArrowRight, Send, Check, Loader } from "lucide-react";
+import { ArrowRight, Send, Check, Loader, Mail } from "lucide-react";
+import LinkedinIcon from "./LinkedinIcon";
 import useSound from "../hooks/useSound";
 
 const API = "/api";
@@ -67,6 +68,37 @@ export default function CTA() {
               onClick={scrollToProducts}
             >
               Explore Job-Skill AI <ArrowRight size={17} />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/velalyn/jobs/?viewAsMember=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost"
+              onMouseEnter={playHover}
+              onClick={playClick}
+            >
+              <LinkedinIcon size={16} /> Contact on LinkedIn
+            </a>
+          </div>
+
+          <div className="cta-contact-strip">
+            <span className="mono" style={{ fontSize: "12.5px", color: "var(--muted-2)" }}>Direct contact:</span>
+            <a
+              href="https://www.linkedin.com/company/velalyn/jobs/?viewAsMember=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-contact-pill"
+              onMouseEnter={playHover}
+              onClick={playClick}
+            >
+              <LinkedinIcon size={14} /> Velalyn on LinkedIn
+            </a>
+            <a
+              href="mailto:founder@velalyn.com"
+              className="cta-contact-pill"
+              onMouseEnter={playHover}
+            >
+              <Mail size={14} /> founder@velalyn.com
             </a>
           </div>
 

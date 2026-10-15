@@ -1,5 +1,6 @@
 import React from "react";
 import { GitBranch, Star, GitCommit, Zap, ExternalLink } from "lucide-react";
+import LinkedinIcon from "./LinkedinIcon";
 
 const CREDENTIALS = [
   "LangGraph",
@@ -58,6 +59,17 @@ export default function About() {
                 >
                   <GitBranch size={16} />
                   <span>github.com/venkatsai2730</span>
+                  <ExternalLink size={12} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/velalyn/jobs/?viewAsMember=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="about-link"
+                  aria-label="Velalyn on LinkedIn"
+                >
+                  <LinkedinIcon size={16} />
+                  <span>linkedin.com/company/velalyn</span>
                   <ExternalLink size={12} />
                 </a>
               </div>

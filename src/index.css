@@ -998,6 +998,37 @@ body {
   font-size: 15.5px;
 }
 
+.cta-contact-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.cta-contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--muted);
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  text-decoration: none;
+  transition: color var(--dur-fast), border-color var(--dur-fast), background var(--dur-fast), transform var(--dur-fast);
+}
+
+.cta-contact-pill:hover {
+  color: var(--mint);
+  border-color: var(--mint);
+  background: rgba(95, 230, 198, 0.08);
+  transform: translateY(-1px);
+}
+
 /* footer */
 .footer {
   position: relative;
